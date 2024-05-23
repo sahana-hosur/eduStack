@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width , initial-scale=1.0"> 
+        <title>Notes Hub</title>
+        <link rel="stylesheet" href="../CSS/sign-in.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="navbar">
+                <img src="../Assets/edustash.jpg" class="logo">
+            </div>
+        </div>
+    </body>
+</html>

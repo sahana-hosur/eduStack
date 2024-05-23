@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elearning Dashboard</title>
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <script src="../js/dashboard.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="user">
+        <span>Dashboard</span>
+        <a href="#"></a>
+      </div>
+    </header>
+    <main>
+      <div class="cards">
+        <div class="card">
+          <span>19</span>
+          <p>Books Downloaded</p>
+        </div>
+        <div class="card">
+          <span>9</span>
+          <p>Opened Books</p>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="profile">
+          <img id="img_usr" src="" alt="Profile Picture" >
+          <p><span id="user_name"></span></p>
+          <a class="open-up" id="open-up">Edit Profile</a>
+          <a class="open-img" id="open-img">Edit Image</a>
+        </div>
+        <div class="plans">
+         <h4>Nickname:<span id="nickname"></span></h4>
+         <h4> Class:<span id="class"></span></h4>
+         <h4>Gender:<span id="gender"></span></h4>
+         <h4>Birth Date:<span id="dob"></span></h4>
+        </div>
+      </div>
+      <div class="sections">
+        <div class="section">
+          <h3>To-do List</h3>
+          <ul>
+            <li>
+              <span class="done">✔</span>
+              Finish Project Branding
+            </li>
+            <li>
+              <span class="pending">▢</span>
+              Start Design for UHS Branding
+            </li>
+            <li>
+              <span class="pending">▢</span>
+              Review Style Guide for Webflow Dev
+            </li>
+          </ul>
+          <a href="#">Show More</a>
+        </div>
+        <div class="section">
+          <h3>Add To-Do List Notes</h3>
+          <input type="text" name="to-do" id="todo-input"  placeholder="Titlle" /><br/>
+        <button>Add</button>          
+        </div>
+      </div>
+      <div class="card" style="margin-top:6px">
+        <h3>Notes Upload Section</h3>
+        <form id="pdf-upload-form" action="../php/upload_pdf.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="pdf_file" id="pdf-file" accept=".pdf" required>
+          <button type="submit">Upload PDF</button>
+        </form>
+        </div>
+      <div class="pages">
+        <h3>My Pages</h3>
+        <ul>
+          <li>
+            <img src="../Assets/dashboard.avif" alt="Page 1">
+            <a href="dashboard.html" style="text-decoration: none;">
+              <p>Personal</p>
+            </a>
+          </li>
+          <li>
+            <img src="../Assets/bookseach.jpeg" alt="Page 2">
+            <a href="search.html" style="text-decoration: none;">
+              <p>Search Notes</p>
+            </a>
+          </li>
+          <li>
+            <img src="../Assets/settings.png" alt="Page 4">
+            <a href="setting.html" style="text-decoration: none;"></a>
+            <p>Settings</p></a>
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <p>Copyright ©</p>
+      </footer>
+    </main>
+  </div>
+  <div class="bg-modal" id="bg-modal">
+    <div class="modal-content">
+      <img src="../Assets/bitmoji.jpg" alt="" srcset="" style="height: 200px;"><br>
+      <a type="submit" class="open-img" id="open-img">Edit</a>
+      <br><br>
+      <form action="../php/data_gather.php" method="post">
+        <input type="text" name="nickname" placeholder="Nickname" id="nickname"><br><br>
+        <input type="date" name="dob" id="dob" >
+        <br><br>
+        <select name="std" id="std">
+          <option value="none">none</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10+</option>
+        </select><br><br>
+        Gender
+        <input type="radio" name="gender" id="gender" value="male">Male 
+        <input type="radio" name="gender" id="gender" value="female">Female
+        <br><br>
+        <button type="reset" class="close">Cancel</button>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="hello" id="hello">
+    <div class="hello1">
+      <div>
+          <img src="../Assets/bitmoji.jpg"  class="1" style="width: 95px; height: 95px; aspect-ratio:2;" onclick="send_data(this.src)">
+          <img src="../Assets/bitmoji1.jpg"  class="2" style="width: 95px; height: 95px; aspect-ratio:2;" onclick="send_data(this.src)"><br>
+          <img src="../Assets/bitmoji2.jpg"  class="3" style="width: 95px; height: 95px; aspect-ratio:2;" onclick="send_data(this.src)">
+          <img src="../Assets/bitmoji3.jpg"  class="4" style="width: 95px; height: 95px; aspect-ratio:2;" onclick="send_data(this.src)"><br>
+          <img src="../Assets/bitmoji4.jpg"  class="5" style="width: 95px; height: 95px; aspect-ratio:2;" onclick="send_data(this.src)">
+          <img src="../Assets/bitmoji5.jpg"  class="6" style="width: 95px; height: 95px; aspect-ratio:2;" onclick="send_data(this.src)"><br>
+
+        <button type="submit" onclick="refresh()">done</button>
+      </form>
+      </div>
+  </div>
+  </div>
+</body>
+
+</html>

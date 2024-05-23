@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("../Assets/into-backimg.jpg");
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.recent-searches, .last-accessed-pdfs {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#recent-search-list, #last-accessed-pdf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#recent-search-list li, #last-accessed-pdf-list li {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+#recent-search-list li:hover, #last-accessed-pdf-list li:hover {
+  background-color: #f5f5f5;
+}
+
+#last-accessed-pdf-list a {
+  font-weight: bold;
+}
+
+#note-list, #pdf-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#note-list li, #pdf-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+#note-list li:hover, #pdf-list li:hover {
+  background-color: #f5f5f5;
+}
+
+#note-list li a {
+  color: #007bff;
+  font-weight: bold;
+}
+
+#pdf-list li {
+  font-style: italic; /* Indicate PDF format */
+}
+
+.pdf-column  a{
+  text-decoration: none;
+} 
+#pdf-list li a {
+  text-decoration: none;
+}
+
+#pdf-list li a::before {
+  content: url("../Assets/pdf.png"); /* Add a PDF icon before the title */
+  margin-right: 5px;
+}
+
+/* Optional styles for "Last Accessed PDFs" section */
+
+.last-accessed-pdfs h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#last-accessed-pdf-list li {
+  font-size: 14px;
+}
+
+#last-accessed-pdf-list li span {
+  font-size: 12px;
+  color: #777;
+  margin-left: 5px;
+}
+.last-accessed-pdfs {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.pdf-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pdf-column {
+  flex-basis: 33%;
+  padding: 10px;
+  text-align: center;
+}
+
+.pdf-column a {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.pdf-column a img {
+  margin-bottom: 5px;
+}
+
+
+/* Responsive adjustments */
+
+@media screen and (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .recent-searches, .last-accessed-pdfs {
+    margin-bottom: 10px;
+  }
+
+  #note-list, #pdf-list {
+    font-size: 14px;
+  }
+}
